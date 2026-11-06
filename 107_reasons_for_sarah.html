@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#190b12">
+<title>107 Reasons Why I Love You ❤️</title>
+<style>
+  :root {
+    --night: #190b12;
+    --wine: #35111f;
+    --wine2: #4b1729;
+    --cream: #f4e8d2;
+    --paper: #f8efdF;
+    --ink: #49332d;
+    --muted: #9c7b72;
+    --gold: #c7a36a;
+    --red: #8e263c;
+    --serif: Georgia, "Times New Roman", serif;
+    --script: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; min-height: 100vh; color: var(--cream);
+    background:
+      radial-gradient(ellipse at 50% 38%, rgba(111,38,60,.38), transparent 47%),
+      radial-gradient(ellipse at 12% 90%, rgba(135,83,57,.13), transparent 35%),
+      linear-gradient(145deg, #10080d, var(--night) 48%, #24101a);
+    font-family: var(--serif); overflow-x: hidden;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; opacity:.16;
+    background-image: radial-gradient(rgba(255,230,190,.8) .65px, transparent .8px);
+    background-size: 37px 37px; mask-image:linear-gradient(transparent,black 25%,black 75%,transparent);
+  }
+  .ambient { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:0; }
+  .glow { position:absolute; width:38vw; height:38vw; border-radius:50%; filter:blur(85px); opacity:.12; background:#b45a68; animation: drift 18s ease-in-out infinite alternate; }
+  .glow.one { top:8%; left:-15%; } .glow.two { right:-18%; bottom:0; background:#bd9562; animation-delay:-8s; }
+  @keyframes drift { to { transform:translate(8vw,-5vh) scale(1.15); } }
+  .dust { position:absolute; width:3px; height:3px; border-radius:50%; background:#e7c89a; opacity:0; animation:floatUp linear infinite; box-shadow:0 0 10px #e7c89a; }
+  @keyframes floatUp { 0% { transform:translateY(15vh) scale(.5); opacity:0; } 15% {opacity:.55} 85% {opacity:.35} 100% {transform:translateY(-110vh) scale(1.2);opacity:0} }
+  .screen { position:relative; z-index:1; min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:34px 20px 46px; text-align:center; }
+  .intro { max-width:620px; margin-bottom:27px; animation:riseIn 1.4s both; }
+  .eyebrow { color:#d5b98d; text-transform:uppercase; letter-spacing:.25em; font-size:.68rem; margin-bottom:17px; }
+  h1 { font-size:clamp(2rem,5vw,3.45rem); line-height:1.08; font-weight:400; letter-spacing:-.035em; margin:0 0 17px; }
+  .intro-copy { color:#ddc9bd; font-size:clamp(.95rem,1.8vw,1.12rem); line-height:1.8; max-width:570px; margin:auto; }
+  .envelope-wrap { width:min(460px,88vw); height:290px; position:relative; perspective:1200px; margin:8px auto 20px; animation:float 5s ease-in-out infinite; filter:drop-shadow(0 24px 35px rgba(0,0,0,.35)); }
+  @keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-9px)} }
+  .envelope { position:absolute; inset:35px 0 0; border-radius:5px 5px 12px 12px; background:linear-gradient(145deg,#fff6e5,#e5d3b8); overflow:visible; cursor:pointer; border:1px solid rgba(255,255,255,.35); }
+  .envelope::before { content:""; position:absolute; inset:0; border-radius:inherit; background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(115,78,51,.025) 4px 5px); pointer-events:none; }
+  .env-left,.env-right,.env-bottom { position:absolute; inset:0; pointer-events:none; }
+  .env-left { clip-path:polygon(0 0,50% 57%,0 100%); background:linear-gradient(130deg,#e8d7bd,#f7ecd8); }
+  .env-right { clip-path:polygon(100% 0,50% 57%,100% 100%); background:linear-gradient(230deg,#e2cfb4,#f5e8d3); }
+  .env-bottom { clip-path:polygon(0 100%,50% 47%,100% 100%); background:linear-gradient(0deg,#dfc9aa,#f2e4ce); }
+  .flap { position:absolute; z-index:5; inset:0 0 auto; height:58%; transform-origin:top; clip-path:polygon(0 0,100% 0,50% 100%); background:linear-gradient(160deg,#f8ecd8,#ddc6a6); transition:transform 1.15s cubic-bezier(.2,.75,.2,1); backface-visibility:hidden; }
+  .letter-peek { position:absolute; z-index:2; left:8%; width:84%; height:92%; bottom:7%; background:linear-gradient(135deg,#fff8e9,#ead9bd); box-shadow:0 0 18px rgba(54,28,18,.15); transition:transform 1.5s cubic-bezier(.2,.8,.2,1); }
+  .seal { position:absolute; z-index:8; left:50%; top:43%; transform:translate(-50%,-50%); width:68px; height:68px; border-radius:50%; display:grid; place-items:center; color:#f4d9c6; font-size:27px; background:radial-gradient(circle at 35% 28%,#bd5261,#7e1e34 68%,#511222); border:2px solid rgba(255,218,190,.45); box-shadow:0 5px 13px #3b1421, inset 0 2px 5px rgba(255,255,255,.25); transition:opacity .4s, transform .6s; }
+  .env-label { position:absolute; z-index:7; left:0; right:0; bottom:28px; color:#785b4d; font-size:1.05rem; letter-spacing:.08em; pointer-events:none; }
+  .tap-hint { color:#c5a98c; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; margin-top:7px; animation:pulse 2s infinite; }
+  @keyframes pulse { 50% {opacity:.48} }
+  .envelope-wrap.opening { animation:none; }
+  .opening .flap { transform:rotateX(180deg); z-index:1; }
+  .opening .letter-peek { transform:translateY(-185px); }
+  .opening .seal { opacity:0; transform:translate(-50%,-50%) scale(1.7) rotate(20deg); }
+  .opening .env-label { opacity:0; }
+  .intro.fade { animation:fadeOut .8s forwards; }
+  @keyframes fadeOut { to {opacity:0; transform:translateY(-18px)} }
+  @keyframes riseIn { from {opacity:0;transform:translateY(20px)} to {opacity:1;transform:none} }
+  #reading { display:none; min-height:100svh; padding:48px 16px 60px; }
+  #reading.active { display:block; animation:riseIn 1.2s both; }
+  .reading-head { text-align:center; max-width:700px; margin:0 auto 22px; }
+  .reading-head .eyebrow { margin-bottom:10px; }
+  .reading-head h2 { font-weight:400; font-size:clamp(1.8rem,4vw,2.65rem); margin:0 0 9px; }
+  .reading-head p { color:#d6bdb1; margin:0; font-size:.95rem; }
+  .reader-shell { width:min(760px,100%); margin:auto; position:relative; }
+  .paper-window { height:min(58vh,570px); min-height:390px; overflow:hidden; position:relative; border-radius:4px; background:linear-gradient(120deg,#f7efdf,#eee0c9 48%,#f8f0e2); box-shadow:0 25px 70px rgba(0,0,0,.38),0 0 0 1px rgba(255,239,211,.32); color:var(--ink); }
+  .paper-window::before { content:""; position:absolute; z-index:2; inset:0; pointer-events:none; background:linear-gradient(to bottom,rgba(248,239,223,.96),transparent 13%,transparent 86%,rgba(248,239,223,.96)); }
+  .paper-texture { position:absolute; inset:0; opacity:.16; pointer-events:none; background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(120,86,58,.08) 5px 6px); }
+  .letter-content { position:absolute; left:0; right:0; top:0; padding:220px clamp(24px,7vw,75px) 250px; transition:transform .75s cubic-bezier(.2,.7,.2,1); will-change:transform; }
+  .letter-kicker { color:#a17a60; letter-spacing:.22em; text-transform:uppercase; font-size:.68rem; text-align:center; margin-bottom:38px; }
+  .reason { min-height:190px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:15px 0; opacity:.18; transform:scale(.97); transition:opacity .8s,transform .8s; border-bottom:1px solid rgba(142,103,77,.15); }
+  .reason.current { opacity:1; transform:scale(1); }
+  .reason-number { font-family:var(--serif); font-size:.75rem; color:#a47766; letter-spacing:.2em; margin-bottom:18px; }
+  .reason-text { font-family:var(--script); font-size:clamp(1.08rem,2.6vw,1.55rem); line-height:1.75; color:#51382f; max-width:570px; }
+  .controls { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; padding:20px 8px 0; }
+  .control { border:1px solid rgba(218,184,145,.42); background:rgba(255,255,255,.055); color:#f1dfcf; padding:10px 17px; border-radius:30px; font: .85rem var(--serif); cursor:pointer; transition:background .25s,border-color .25s,transform .25s; }
+  .control:hover:not(:disabled) { background:rgba(205,160,124,.17); border-color:#d5b98d; transform:translateY(-2px); }
+  .control:disabled { opacity:.3; cursor:not-allowed; }
+  .control.primary { background:#8b3548; border-color:#a85868; }
+  .progress-row { display:flex; justify-content:space-between; align-items:center; color:#d4bda9; font-size:.78rem; letter-spacing:.1em; margin:18px 5px 0; }
+  .progress-track { height:2px; background:rgba(235,208,177,.18); margin-top:9px; overflow:hidden; }
+  .progress-fill { height:100%; width:0; background:linear-gradient(90deg,#9e5261,#dfc091); transition:width .45s; }
+  .ending { display:none; min-height:100svh; padding:70px 22px; text-align:center; align-items:center; justify-content:center; flex-direction:column; background:radial-gradient(ellipse at center,rgba(121,46,63,.35),transparent 60%); }
+  .ending.active { display:flex; animation:riseIn 1.5s both; }
+  .ending .small { color:#d4b88f; text-transform:uppercase; letter-spacing:.24em; font-size:.7rem; }
+  .ending h2 { font-size:clamp(2rem,5vw,3.6rem); font-weight:400; line-height:1.2; max-width:760px; margin:25px auto; }
+  .ending .final-script { font-family:var(--script); font-size:clamp(1.5rem,4vw,2.35rem); color:#f0d8c7; margin-top:12px; }
+  .ending .scroll-note { color:#c6a997; font-size:.8rem; margin-top:45px; letter-spacing:.1em; }
+  #archive { display:none; color:var(--ink); background:linear-gradient(120deg,#f7efdf,#eee0c9); width:min(760px,calc(100% - 32px)); margin:0 auto 70px; padding:clamp(28px,6vw,65px); box-shadow:0 20px 60px rgba(0,0,0,.25); }
+  #archive.active { display:block; animation:riseIn 1.1s both; }
+  #archive h3 { text-align:center; font-weight:400; font-size:2rem; margin:0 0 10px; }
+  #archive .archive-intro { text-align:center; color:#987565; font-style:italic; margin:0 0 35px; }
+  .archive-list { padding:0; margin:0; list-style:none; }
+  .archive-list li { padding:13px 0; border-bottom:1px solid rgba(142,103,77,.17); font-family:var(--script); line-height:1.65; font-size:1.04rem; }
+  .archive-list .num { font: .7rem var(--serif); color:#a47766; letter-spacing:.12em; margin-right:12px; }
+  .archive-list li:last-child { color:#8e2b43; }
+  .replay { display:block; margin:28px auto 0; }
+  @media (max-width:600px) {
+    .screen { padding:25px 18px 35px; }
+    .intro { margin-bottom:12px; }
+    .envelope-wrap { height:245px; width:min(390px,90vw); }
+    .envelope { top:27px; }
+    .seal { width:58px;height:58px;font-size:23px; }
+    .env-label { bottom:22px;font-size:.92rem; }
+    #reading { padding:34px 12px 42px; }
+    .paper-window { min-height:360px; height:56svh; }
+    .letter-content { padding:180px 22px 210px; }
+    .reason { min-height:175px; }
+    .controls { gap:8px; }
+    .control { padding:9px 13px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
+  }
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><div class="glow one"></div><div class="glow two"></div></div>
+<main>
+  <section class="screen" id="opening">
+    <div class="intro" id="intro">
+      <div class="eyebrow">A letter from afar</div>
+      <h1>Even though we're miles apart...</h1>
+      <p class="intro-copy">I wanted to send you a little piece of my heart. Since I can't be there to tell you all of this in person, I wrote you something special — 107 reasons why I love you.</p>
+    </div>
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open your letter">
+        <div class="letter-peek"></div>
+        <div class="env-left"></div><div class="env-right"></div><div class="env-bottom"></div>
+        <div class="flap"></div>
+        <div class="seal">♥</div>
+        <div class="env-label">For Sarah, with love</div>
+      </div>
+    </div>
+    <div class="eyebrow" style="margin:0 0 8px">107 Reasons Why I Love You</div>
+    <div class="tap-hint">Tap the seal to open your letter</div>
+  </section>
+
+  <section id="reading">
+    <div class="reading-head">
+      <div class="eyebrow">Every word, from my heart</div>
+      <h2>For you, Sarah</h2>
+      <p>107 little reminders of how much you mean to me.</p>
+    </div>
+    <div class="reader-shell">
+      <div class="paper-window" id="paperWindow">
+        <div class="paper-texture"></div>
+        <div class="letter-content" id="letterContent">
+          <div class="letter-kicker">A few things I adore about you</div>
+          <div id="reasonList"></div>
+        </div>
+      </div>
+      <div class="progress-row"><span id="progressLabel">001 / 107</span><span id="progressWord">A little love, at a time</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="controls">
+        <button class="control" id="prevBtn" type="button">← Previous</button>
+        <button class="control primary" id="pauseBtn" type="button">Ⅱ Pause</button>
+        <button class="control" id="nextBtn" type="button">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ending" id="ending">
+    <div class="small">And beyond every list...</div>
+    <h2>And if I had to write another 100 reasons, I'd still have a thousand more.</h2>
+    <div class="final-script">I love you, Sarah. ♥</div>
+    <div class="scroll-note">↓ Take your time. You can revisit every word below. ↓</div>
+  </section>
+
+  <section id="archive">
+    <h3>All my reasons, for you</h3>
+    <p class="archive-intro">Read them again, whenever you need a reminder.</p>
+    <ol class="archive-list" id="archiveList"></ol>
+    <button class="control replay" id="replayBtn" type="button">Read the letter again ↗</button>
+  </section>
+</main>
+
+<script>
+/* =========================================================
+   EDIT YOUR 107 REASONS HERE.
+   All 107 reasons are part of the letter.
+   ========================================================= */
+const reasons = [
+"You make even my worst days feel better.",
+"You make me feel loved without even trying.",
+"You make me smile at my screen like an idiot.",
+"You make distance feel a little less difficult.",
+"You give me something to look forward to every day.",
+"You make me feel like I'm exactly where I belong.",
+"You make my heart feel at peace.",
+"You make ordinary moments feel special.",
+"You make me feel appreciated.",
+"You make me happier just by existing.",
+"Because of your beautiful heart.",
+"The way you care about little things.",
+"Your kindness, even when nobody notices.",
+"How passionate you can be about things you love.",
+"Your honesty.",
+"The way you express yourself.",
+"How you can be both cute and annoying at the same time.",
+"Your unique way of seeing the world.",
+"How you never fail to surprise me.",
+"Simply because you're YOU.",
+"Your voice.",
+"Your eyes.",
+"The way you tell me about your day.",
+"Your music taste.",
+"The way you get excited about something.",
+"Your random messages.",
+"Your little habits.",
+"The way you react when you're mad.",
+"Because your happiness means just as much to me as my own.",
+"The way you make me laugh without even realizing it.",
+"Because I can be myself around you.",
+"Because I never get tired of talking to you.",
+"Because I want to tell you every little thing that happens to me.",
+"Because you're the first person I want to share good news with.",
+"Because I want to be there for you.",
+"Because I love making you happy.",
+"Because I care about your dreams.",
+"Because I want to see you succeed.",
+"Because I want to experience life with you.",
+"Because loving you feels natural.",
+"Because even miles can't change how I feel about you.",
+"Because you're worth every second of waiting.",
+"Because I still feel close to you even when you're far away.",
+"Because every moment with you is worth staying for.",
+"Because you make me excited about the day we'll finally meet.",
+"Because I wish I could hug you whenever you need one.",
+"Because distance reminds me how much I want you beside me.",
+"Because you're someone I'd cross the world to see.",
+"Because I count the days until I can hold your hand.",
+"Because you're my favorite person, no matter the distance.",
+"Because you're my favorite notification.",
+"Because I love annoying you.",
+"Because you make me forget what I was about to say.",
+"Because I could listen to you talk about absolutely nothing.",
+"Because you're cute even when you're being dramatic.",
+"Because I love your random thoughts.",
+"Because arguing with you is somehow still adorable.",
+"Because I want to steal all your hugs.",
+"Because you're my favorite distraction.",
+"Because I could never get bored of you.",
+"Your strength.",
+"Your determination.",
+"The way you keep going even when things get difficult.",
+"Your intelligence.",
+"Your creativity.",
+"Your ambition.",
+"The way you motivate me.",
+"Your ability to make people feel special.",
+"The way you handle difficult situations.",
+"The person you're becoming.",
+"Because you changed the way I understand love.",
+"Because you make me want to become a better person.",
+"Because I want to know every version of you.",
+"Because I love hearing about your past.",
+"Because I want to be part of your future.",
+"Because I want to celebrate your smallest victories.",
+"Because I want to comfort you on your hardest days.",
+"Because you deserve to be loved on your good and bad days.",
+"Because I don't just love the easy parts of you.",
+"Because I choose you, even on difficult days.",
+"Because I want our first real hug.",
+"Because I want to see your smile in person.",
+"Because I want to make memories with you.",
+"Because I want to travel the world with you.",
+"Because I want to experience all our little firsts.",
+"Because I want to grow alongside you.",
+"Because I want to be there for your achievements.",
+"Because I want to turn our dreams into memories.",
+"Because I can't wait for all the moments we haven't experienced yet.",
+"Because my favorite memories with you are still waiting to happen.",
+"Because out of everyone in this world, my heart found you.",
+"Because I wouldn't trade what we have for anything.",
+"Because you make me believe in beautiful things.",
+"Because even after a thousand conversations, I still want another one.",
+"Because there's no one I'd rather share my little world with.",
+"Because I love you in ways I sometimes struggle to explain.",
+"Because I keep discovering new reasons to love you.",
+"Because you're not just someone I love, you're someone I cherish.",
+"Because if I had to choose again, I'd still choose you.",
+"Because no list of 100 reasons could ever explain how much I love you.",
+"Because I want you to be my wife.",
+"Because I dream of building a beautiful family with you.",
+"Because I want our daughter to have your beautiful eyes.",
+"Because I want to grow old with you and still look at you the same way.",
+"Because I want to wake up next to you every morning for the rest of my life.",
+"Because I want our future children to grow up knowing how deeply their mother is loved.",
+"Because I want to spend a lifetime creating little moments with you that we'll remember forever."
+];
+
+/* EDIT THE ENDING MESSAGES HERE */
+const endingMessage = "And if I had to write another 100 reasons, I'd still have a thousand more.";
+const finalMessage = "I love you, Sarah. ♥";
+
+const opening = document.getElementById("opening");
+const intro = document.getElementById("intro");
+const envelopeWrap = document.getElementById("envelopeWrap");
+const envelope = document.getElementById("envelope");
+const reading = document.getElementById("reading");
+const ending = document.getElementById("ending");
+const archive = document.getElementById("archive");
+const letterContent = document.getElementById("letterContent");
+const reasonList = document.getElementById("reasonList");
+const paperWindow = document.getElementById("paperWindow");
+const progressLabel = document.getElementById("progressLabel");
+const progressFill = document.getElementById("progressFill");
+const pauseBtn = document.getElementById("pauseBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let current = 0;
+let paused = false;
+let started = false;
+let finished = false;
+let lastFrame = 0;
+let elapsed = 0;
+let rafId = null;
+const DISPLAY_TIME = 10000; // 10 seconds per reason
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const reasonNodes = reasons.map((reason, index) => {
+  const item = document.createElement("article");
+  item.className = "reason";
+  const number = document.createElement("div");
+  number.className = "reason-number";
+  number.textContent = String(index + 1).padStart(3, "0");
+  const text = document.createElement("div");
+  text.className = "reason-text";
+  text.textContent = reason;
+  item.append(number, text);
+  reasonList.appendChild(item);
+  return item;
+});
+
+const archiveList = document.getElementById("archiveList");
+reasons.forEach((reason, index) => {
+  const li = document.createElement("li");
+  const num = document.createElement("span");
+  num.className = "num";
+  num.textContent = String(index + 1).padStart(3, "0");
+  li.append(num, document.createTextNode(reason));
+  archiveList.appendChild(li);
+});
+document.querySelector(".ending h2").textContent = endingMessage;
+document.querySelector(".final-script").textContent = finalMessage;
+
+function setCurrent(index, resetTimer = true) {
+  current = Math.max(0, Math.min(reasons.length - 1, index));
+  reasonNodes.forEach((node, i) => node.classList.toggle("current", i === current));
+  const active = reasonNodes[current];
+  const center = active.offsetTop + active.offsetHeight / 2;
+  const viewportCenter = paperWindow.clientHeight / 2;
+  letterContent.style.transform = `translateY(${viewportCenter - center}px)`;
+  progressLabel.textContent = `${String(current + 1).padStart(2, "0")} / ${String(reasons.length).padStart(3, "0")}`;
+  progressFill.style.width = `${((current + 1) / reasons.length) * 100}%`;
+  document.getElementById("progressWord").textContent = "A little love, at a time";
+  prevBtn.disabled = current === 0;
+  nextBtn.disabled = current === reasons.length - 1;
+  if (resetTimer) elapsed = 0;
+}
+
+function tick(timestamp) {
+  if (!started || finished) return;
+  if (!lastFrame) lastFrame = timestamp;
+  const delta = timestamp - lastFrame;
+  lastFrame = timestamp;
+  if (!paused) {
+    elapsed += delta;
+    if (elapsed >= DISPLAY_TIME) {
+      if (current < reasons.length - 1) setCurrent(current + 1);
+      else completeLetter();
+    }
+  }
+  rafId = requestAnimationFrame(tick);
+}
+
+function beginReading() {
+  if (started) return;
+  started = true;
+  envelopeWrap.classList.add("opening");
+  intro.classList.add("fade");
+  document.querySelector(".tap-hint").style.opacity = "0";
+  setTimeout(() => {
+    opening.style.display = "none";
+    reading.classList.add("active");
+    setCurrent(0);
+    lastFrame = 0;
+    rafId = requestAnimationFrame(tick);
+  }, 1550);
+}
+
+function completeLetter() {
+  if (finished) return;
+  finished = true;
+  paused = true;
+  if (rafId) cancelAnimationFrame(rafId);
+  reading.classList.remove("active");
+  reading.style.display = "none";
+  ending.classList.add("active");
+  setTimeout(() => {
+    archive.classList.add("active");
+    document.body.style.overflowY = "auto";
+    archive.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
+  }, 10000);
+}
+
+function updatePauseButton() {
+  pauseBtn.textContent = paused ? "▶ Resume" : "Ⅱ Pause";
+}
+pauseBtn.addEventListener("click", () => {
+  if (finished) return;
+  paused = !paused;
+  updatePauseButton();
+});
+nextBtn.addEventListener("click", () => {
+  if (current < reasons.length - 1) setCurrent(current + 1);
+});
+prevBtn.addEventListener("click", () => {
+  if (current > 0) setCurrent(current - 1);
+});
+envelope.addEventListener("click", beginReading);
+envelope.addEventListener("keydown", event => {
+  if (event.key === "Enter" || event.key === " ") { event.preventDefault(); beginReading(); }
+});
+document.getElementById("replayBtn").addEventListener("click", () => {
+  finished = false; started = false; paused = false; elapsed = 0; lastFrame = 0;
+  archive.classList.remove("active"); ending.classList.remove("active");
+  reading.style.display = ""; reading.classList.remove("active");
+  opening.style.display = ""; intro.classList.remove("fade");
+  envelopeWrap.classList.remove("opening");
+  document.querySelector(".tap-hint").style.opacity = "";
+  setCurrent(0);
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+});
+/* Small ambient particles */
+const ambient = document.querySelector(".ambient");
+for (let i = 0; i < 24; i++) {
+  const dot = document.createElement("i");
+  dot.className = "dust";
+  dot.style.left = `${Math.random() * 100}%`;
+  dot.style.top = `${Math.random() * 100}%`;
+  dot.style.animationDuration = `${14 + Math.random() * 19}s`;
+  dot.style.animationDelay = `${-Math.random() * 25}s`;
+  dot.style.opacity = `${.15 + Math.random() * .3}`;
+  ambient.appendChild(dot);
+}
+
+window.addEventListener("resize", () => {
+  if (started && !finished) setCurrent(current, false);
+});
+document.body.style.overflowY = "hidden";
+</script>
+</body>
+</html>
